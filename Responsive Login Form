@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=350, initial-scale=1.0">
+  <title>Login Form</title>
+  <style>
+    /* Use box-sizing for predictable sizing with padding and border */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #f4f6fb;
+    }
+
+    .login-card {
+      width: 350px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.04), 0 1.5px 4px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 16px; /* consistent vertical spacing between elements */
+    }
+
+    .login-card h2 {
+      text-align: center;
+      margin: 0 0 8px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .login-form label {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 15px;
+      color: #444;
+      font-weight: 500;
+      text-align: left;
+    }
+
+    .login-form input[type="email"],
+    .login-form input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 15px;
+      background: #f8f8fb;
+      transition: border-color 0.2s;
+    }
+
+    .login-form input:focus {
+      outline: none;
+      border-color: #5c8df6;
+      background: #fff;
+    }
+
+    .login-form button[type="submit"] {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      background: #5c8df6;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      text-align: center;
+      margin-top: 6px;
+      box-shadow: 0 1px 3px rgba(21,33,77,0.09);
+      transition: background 0.2s;
+    }
+
+    .login-form button[type="submit"]:hover {
+      background: #486ed6;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-card">
+    <h2>Login</h2>
+    <form class="login-form" autocomplete="off">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Sign In</button>
+    </form>
+  </div>
+</body>
+</html>
